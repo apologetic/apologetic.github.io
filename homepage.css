@@ -1,3 +1,15 @@
+.secret {
+
+transition: all .5s ease;
+
+}
+
+.secret:hover {
+
+  color: white;
+
+}
+
 .para {
   padding-left: 20px;
 
