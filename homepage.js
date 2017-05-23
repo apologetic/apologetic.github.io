@@ -119,8 +119,15 @@ $(document).ready(function(){
   localStorage.clickcount2 === "1" && localStorage.clickcount1 === "1"){
 
     $(".jumbotron .jumbotron .row .quote p:first-child").css("background-color", "purple");
-    $(".quote:hover ").css("background-color", "yellow");
+    $(".jumbotron .jumbotron .row .quote p:first-child").hover(function() {
+        $(this).css("background-color","mediumorchid")
+    });
+
     $(".container .row").css("background-color", "purple");
+    $(".container .row .col-sm-3").hover(function() {
+        $(this).css("background-color","mediumorchid")
+    });
+
 
   }
 
