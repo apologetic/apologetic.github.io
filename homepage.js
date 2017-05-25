@@ -119,13 +119,19 @@ $(document).ready(function(){
   localStorage.clickcount2 === "1" && localStorage.clickcount1 === "1"){
 
     $(".jumbotron .jumbotron .row .quote p:first-child").css("background-color", "purple");
-    $(".jumbotron .jumbotron .row .quote p:first-child").hover(function() {
+    $(".jumbotron .jumbotron .row .quote p:first-child").mouseenter(function() {
         $(this).css("background-color","mediumorchid")
+    });
+    $(".jumbotron .jumbotron .row .quote p:first-child").mouseleave(function() {
+        $(this).css("background-color","purple")
     });
 
     $(".container .row").css("background-color", "purple");
-    $(".container .row .col-sm-3").hover(function() {
+    $(".container .row .col-sm-3").mouseenter(function() {
         $(this).css("background-color","mediumorchid")
+    });
+    $(".container .row .col-sm-3").mouseleave(function() {
+        $(this).css("background-color","purple")
     });
 
 
