@@ -1,5 +1,6 @@
 console.log("You found the Easter Egg! Fun fact: Easter is NOT pagan!");
-
+var listOfSecrets;
+var works;
 
 $(document).ready(function(){
 
@@ -9,7 +10,10 @@ $(document).ready(function(){
   });
 
   if (typeof(Storage) !== "undefined") {
-
+    works = true;
+    listOfSecrets = [localStorage.clickcount1, localStorage.clickcount2,
+    localStorage.clickcount3, localStorage.clickcount4, localStorage.clickcount5,
+    localStorage.clickcount6];
     $("#secret1").one('click', function(){
 
       if (localStorage.clickcount1 === "0") {
@@ -114,9 +118,17 @@ $(document).ready(function(){
 
   }
 
-  if(localStorage.clickcount6 === "1" && localStorage.clickcount5 === "1" &&
-  localStorage.clickcount4 === "1" && localStorage.clickcount3 === "1" &&
-  localStorage.clickcount2 === "1" && localStorage.clickcount1 === "1"){
+  for(var i = 0; i < listOfSecrets.length; i++){
+
+    if (listOfSecrets[i]=="0"){
+
+      works = false;
+
+    }
+
+  }
+
+  if(works){
 
     $(".jumbotron .jumbotron .row .quote p:first-child").css("background-color", "purple");
     $(".jumbotron .jumbotron .row .quote p:first-child").mouseenter(function() {
